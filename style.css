@@ -324,7 +324,7 @@ footer {
     align-items: center;
     position: relative; /* Ensure content is positioned relative to the background */
     background-image: url("../images/fondoupv.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
     padding: 50px;
     box-sizing: border-box;
   }
