@@ -323,43 +323,82 @@ footer {
     justify-content: center;
     align-items: center;
     position: relative; /* Ensure content is positioned relative to the background */
-    z-index: 1; /* Ensure content is above the background image */
+    background-image: url("../images/fondoupv.jpg");
     background-size: 100% 100%;
-    padding: 0;
-}
-
-.image-container {
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  
+  .image-container {
     display: flex;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Place the image behind other elements */
-    background-image: url("../images/tablonfondo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-clip: inherit;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.image-container a {
-    position: relative;
-    display: flex;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.board .full-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire screen */
-
-}
-
-#download_page_body {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-}
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    width: 100%;
+  }
+  
+  .image-container a {
+    flex: 0 1 150px; /* Images will take up at least 150px, adjust as necessary */
+    margin: 10px;
+    background: #ffffff;
+    border: solid 1px #e6e6e6;
+    border-radius: 2px;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+  }
+  
+  .image-container a span {
+    background: #f2594b;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 5px 10px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+  
+  .image-container a span:last-child {
+    margin-left: -20px;
+  }
+  
+  .image-container a:before,
+  .image-container a:after {
+    background: #ffffff;
+    border: solid 3px #9fb4cc;
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin: -17px 0 0 -12px;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+  }
+  
+  .image-container a:hover:before,
+  .image-container a:hover:after {
+    background: #e2e8f0;
+  }
+  
+  .image-container a:before {
+    margin: -23px 0 0 -5px;
+  }
+  
+  .image-container a:hover {
+    background: #e2e8f0;
+    border-color: #9fb4cc;
+  }
+  
+  .image-container a:active {
+    background: #dae0e8;
+    box-shadow: inset 0 2
